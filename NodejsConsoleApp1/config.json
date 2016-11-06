@@ -1,0 +1,11 @@
+﻿{
+  "autoLeaveVoice": true,
+  "autoLoadSounds": false,
+  "botPrefix": "Мебель, ",
+  "botToken": "MjAwMzE0NTMzMjQ2NTMzNjMy.Cl7c8g.g4qHFbxaSuxMnS-E3r3Gu9dd_ko",
+  "commandTrigger": "!",
+  "demoMode": true,
+  "soundPath": "./sounds/",
+  "statsFileName": "./stats.json"
+}
+

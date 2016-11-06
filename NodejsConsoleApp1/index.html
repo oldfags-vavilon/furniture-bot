@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="PureOutput"></div>
+        <hr>
+        <div id="ParsedOutput"></div>
+        <hr>
+        <div id="HeroesList"><table id="3"></table></div>
+        <script>
+
+            $.getJSON( "heroes.json", function( data ) {
+                var items = [];
+                $.each( data.result.heroes, function( key, val ) {
+                   
+                    items.push( "<li id='" + val.id + "'>" + val.localized_name + "</li>" );
+                });
+                $( "<ul/>", {
+                     "class": "my-new-list",
+                     html: items.join( "" )
+                }).appendTo( "#HeroesList" );
+            });
+
+            $.getJSON( "match.json", function( data ) {
+                var player = [];
+                var hero = 0;
+                $.each( data.result.players, function( key, val ) {
+                    hero = $("#"+val.hero_id).text()
+                    player.push( "<li id='" + key + "'>" + val.account_id + "/" + val.player_slot + "/" + "On a Hero: "+ hero + val.kills + "K" + val.deaths + "D" + val.assists + "A" +"</li>" );
+                });
+ 
+                $( "<ul/>", {
+                     "class": "my-new-list",
+                     html: player.join( "" )
+                }).appendTo( "#ParsedOutput" );
+            });
+        </script>
+    </body>
+</html>

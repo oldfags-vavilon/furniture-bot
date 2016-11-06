@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a92782a4babd865a5441f4cd0dcce36b9f92a866/twitter/twitter.d.ts",
+    "raw": "registry:dt/twitter#0.0.0+20161010105243",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a92782a4babd865a5441f4cd0dcce36b9f92a866/twitter/twitter.d.ts"
+  }
+}
